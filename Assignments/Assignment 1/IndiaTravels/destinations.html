@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <title>Destinations</title>
+  <style type="text/css"> 
+    body, html {
+      height: 100%;
+    }
+
+    * {
+      box-sizing: border-box; 
+    }
+
+    #container{
+    width: 80%;
+    margin-left: 100px;
+  }
+  .description{
+   padding: 10px;
+    text-align: center;
+  }
+  .dest-gallery img{
+    width: 250px;
+    height: 250px;
+  }
+  .dest-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.5em 0;
+    gap: 1.5em;
+  }
+  .dest-gallery{
+      align-items: center;
+      transition: all 0.3s ease(gravel);
+      border-radius: 10px;
+      cursor:zoom-in;
+  }
+  @media (min-width: 40em){
+      .dest-gallery{
+        grid-template-columns: repeat(5, 18vw);
+        grid-template-rows: repeat(2, 20vh);
+      }
+  }
+  @media (min-width:60em){
+      .dest-gallery{
+        grid-template-columns: repeat(10, 8vw);
+        grid-template-rows: 25vh;
+         
+      }
+  }
+  img{
+
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: all 0.15s ease(downhill) ;
+      position: center;
+      box-shadow: 0 0 0 #0000;
+      opacity: 0.6;
+
+  }
+  img :first-child{
+      border-radius:  10px 10px 10px 10px ;
+  }
+  img :last-child{
+      border-radius: 10px 10px 10px 10px ;
+  }
+  @media (min-width: 40em) and (max-width: 59.99em){
+      img:first-child{
+          border-radius: 10px 10px 10px 10px ;
+      }
+      img:nth-child(4){
+          border-radius: 10px 10px 10px 10px ;
+      }
+      img:last-child{
+          border-radius:10px 10px 10px 10px;
+      }
+  }
+  @media (min-width: 60em) {
+      img:first-child{
+          border-radius: 10px 10px 10px 10px;
+      }
+      img :last-child{
+          border-radius: 10px 10px 10px 10px ;
+      }
+  }
+  img:hover{
+      opacity: 1;
+      z-index: 1;
+      box-shadow: 1em 1em 1em #000;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+      width:100%;
+      height: 300%;
+      left: -50%;
+      top: -200%;
+
+  }
+  @media (min-width:40em){
+      img:hover{
+          width:150%;
+          height:300%;
+          left:-75%;
+          top: -25%;
+      }
+  }
+  @media (min-width:60em){
+      img:hover{
+          width:150%;
+          height:100%;
+          left:-75%;
+          top: -25%;
+      }
+      img:hover ~ img{
+          left:175%;
+
+      }
+  }
+
+  .container-dest{
+        width: 95%;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 20px;
+        text-align: justify;
+    }
+  </style>
+  <link href="style.css" rel="stylesheet">  
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+</head>
+<body>
+  <!-- START -- NAVIGATION BAR AND LOGO CODE -->
+<header>
+  <div class="nav-bar" >
+    <div class="container">
+      <div class="logo-div">
+        <a href="MainPage.html" rel="home">
+            <img src="images/india-logo-2.png" class="logo">
+       </a>
+      </div>
+      <div class="nav-div">
+        <nav class="navigation">
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="Tours.html">Tours</a></li>
+       </nav>
+     </div>
+   </div>
+  </div>
+</header>
+  <!-- END -- NAVIGATION BAR AND LOGO CODE -->
+<!-- START -- PAGE CONTENT-->
+
+
+  <div class="container-dest">
+    <h1>Top 5 Destinations in India 2021</h1>
+    <br/>
+    <p>Choice of holiday destinations in India seems to be infinite – from scenic destinations to historically and culturally soaked sites, from cities bustling with chaos and confusion to destinations offering laid-back and relaxed stays. Amidst this huge list of vacation destinations, there is always confusion regarding choosing the best place to visit in India. Well! We relieve you of this dilemma and present the list of top 20 destinations in India for all kinds of travellers.</p>
+    <div id="container">
+        <div class="dest-group">
+            <div class="dest-gallery">
+                <a href="images/dest-delhi.jpeg" target="_blank"> 
+                <img src="images/dest-delhi.jpeg">
+                <div class="description">
+                    Delhi
+                </div>
+            </a>
+            </div>    
+            <div class="dest-gallery">
+                <a href="images/dest-kashmir.jpeg" target="_blank"> 
+                <img src="images/dest-kashmir.jpeg">
+                <div class="description">
+                    Kashmir
+                </div>
+            </a>
+            </div>  
+         
+            <div class="dest-gallery">
+                <a href="images/dest-ladakh.jpeg" target="_blank"> 
+                <img src="images/dest-ladakh.jpeg">
+                <div class="description">
+                    Ladakh
+                </div>
+            </a>
+            </div>  
+            <div class="dest-gallery">
+                <a href="images/dest-meghalaya.jpeg" target="_blank"> 
+                <img src="images/dest-meghalaya.jpeg">
+                <div class="description">
+                    Meghalaya
+                </div>
+            </a>
+            </div>  
+            <div class="dest-gallery">
+                <a href="images/dest-sikkim.jpeg" target="_blank"> 
+                <img src="images/dest-sikkim.jpeg">
+                <div class="description">
+                    Sikkim
+                </div>
+            </a>
+            </div>  
+        </div>
+
+  </div>
+
+<!-- START -- PAGE CONTENT-->
+  <!-- START -- FOOTER CODE START -->
+  <footer>
+    <div class="footer-div">
+     <li><a href="mailto:singh.c@northeastern.edu">Click here</a> and help us improve our website.</li>
+     <li>Copyright 2021. All rights reserved. India Travels Inc. </li>
+     <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+     <li>Website by <a href="#">Charu Singh</a></li>
+    </div>
+</footer>
+
+  <!-- END -- FOOTER CODE START -->
+
+</body>
+</html>

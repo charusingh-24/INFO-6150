@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <title>Tours</title>
+  <style type="text/css"> 
+  body{
+      align-items: center;
+      justify-content: center;
+  }
+  #container{
+    width: 80%;
+    margin-left: 100px;
+  }
+  .description{
+   padding: 10px;
+    text-align: center;
+  }
+  .tour-gallery img{
+    width: 250px;
+    height: 250px;
+  }
+  .tour-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.5em 0;
+    gap: 1.5em;
+  }
+  .tour-gallery{
+      align-items: center;
+      transition: all 0.3s ease(gravel);
+      border-radius: 10px;
+      cursor:zoom-in;
+  }
+  @media (min-width: 40em){
+      .tour-gallery{
+        grid-template-columns: repeat(5, 18vw);
+        grid-template-rows: repeat(2, 20vh);
+      }
+  }
+  @media (min-width:60em){
+      .tour-gallery{
+        grid-template-columns: repeat(10, 8vw);
+        grid-template-rows: 25vh;
+         
+      }
+  }
+  img{
+
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: all 0.15s ease(downhill) ;
+      position: center;
+      box-shadow: 0 0 0 #0000;
+      opacity: 0.6;
+
+  }
+  img :first-child{
+      border-radius:  10px 10px 10px 10px ;
+  }
+  img :last-child{
+      border-radius: 10px 10px 10px 10px ;
+  }
+  @media (min-width: 40em) and (max-width: 59.99em){
+      img:first-child{
+          border-radius: 10px 10px 10px 10px ;
+      }
+      img:nth-child(5){
+          border-radius: 10px 10px 10px 10px ;
+      }
+      img:nth-child(6){
+          border-radius: 10px 10px 10px 10px;
+      }
+      img:last-child{
+          border-radius:10px 10px 10px 10px;
+      }
+  }
+  @media (min-width: 60em) {
+      img:first-child{
+          border-radius: 10px 10px 10px 10px;
+      }
+      img :last-child{
+          border-radius: 10px 10px 10px 10px ;
+      }
+  }
+  img:hover{
+      opacity: 1;
+      z-index: 1;
+      box-shadow: 1em 1em 1em #000;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+      width:100%;
+      height: 300%;
+      left: -50%;
+      top: -200%;
+
+  }
+  @media (min-width:40em){
+      img:hover{
+          width:150%;
+          height:300%;
+          left:-75%;
+          top: -25%;
+      }
+  }
+  @media (min-width:60em){
+      img:hover{
+          width:150%;
+          height:100%;
+          left:-75%;
+          top: -25%;
+      }
+      img:hover ~ img{
+          left:175%;
+
+      }
+  }
+
+
+  .content{
+      padding: 5%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      line-height: 20px;
+  }
+  </style>
+  <link href="style.css" rel="stylesheet">  
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+</head>
+<body>
+  <!-- START -- NAVIGATION BAR AND LOGO CODE -->
+<header>
+  <div class="nav-bar" >
+    <div class="container">
+      <div class="logo-div">
+        <a href="MainPage.html" rel="home">
+            <img src="images/india-logo-2.png" class="logo">
+       </a>
+      </div>
+      <div class="nav-div">
+        <nav class="navigation">
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="Tours.html">Tours</a></li>
+       </nav>
+     </div>
+   </div>
+  </div>
+</header>
+  <!-- END -- NAVIGATION BAR AND LOGO CODE -->
+<!-- START -- PAGE CONTENT-->
+<div class="content">
+    <h1>Explore India Tours and Resources</h1>
+    <br>
+    <p>Planning a trip to India? You’re probably asking yourself a lot of questions like, is India expensive? What should my India budget be? What’s the best time of year to travel to India? What is the Golden Triangle? India, home to over a billion people, is one of the most fascinating and beautiful places on earth, however, it can also be a bit overwhelming to plan a trip to India all on your own.</p>
+</div>
+<div id="container">
+<div class="tour-group">
+    <div class="tour-gallery">
+        <a href="images/tour-india-rajasthan.jpeg" target="_blank"> 
+        <img src="images/tour-india-rajasthan.jpeg">
+        <div class="description">
+            Rajasthan Tour
+        </div>
+    </a>
+    </div>    
+    <div class="tour-gallery">
+        <a href="images/tour-kerela.jpeg" target="_blank"> 
+        <img src="images/tour-kerela.jpeg">
+        <div class="description">
+            Kerela Tour
+        </div>
+    </a>
+    </div>  
+ 
+    <div class="tour-gallery">
+        <a href="images/tour-northeast.jpeg" target="_blank"> 
+        <img src="images/tour-northeast.jpeg">
+        <div class="description">
+            Northeast Region Tour
+        </div>
+    </a>
+    </div>  
+    <div class="tour-gallery">
+        <a href="images/tour-south.jpeg" target="_blank"> 
+        <img src="images/tour-south.jpeg">
+        <div class="description">
+            Southern India Tour
+        </div>
+    </a>
+    </div>  
+    <div class="tour-gallery">
+        <a href="images/tour-wildlife-Ranthambore-National-Park.jpeg" target="_blank"> 
+        <img src="images/tour-wildlife-Ranthambore-National-Park.jpeg">
+        <div class="description">
+            Wildlife Safari
+        </div>
+    </a>
+    </div>  
+    <div class="tour-gallery">
+        <a href="images/tour-cruise.jpeg" target="_blank"> 
+        <img src="images/tour-cruise.jpeg ">
+        <div class="description">
+            Indian Ocean Cruise 
+        </div>
+    </a>
+    </div> 
+</div>
+</div>
+
+
+<!-- START -- PAGE CONTENT-->
+  <!-- START -- FOOTER CODE START -->
+  <footer>
+    <div class="footer-div">
+     <li><a href="mailto:singh.c@northeastern.edu">Click here</a> and help us improve our website.</li>
+     <li>Copyright 2021. All rights reserved. India Travels Inc. </li>
+     <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+     <li>Website by <a href="#">Charu Singh</a></li>
+    </div>
+</footer>
+
+  <!-- END -- FOOTER CODE START -->
+
+</body>
+</html>

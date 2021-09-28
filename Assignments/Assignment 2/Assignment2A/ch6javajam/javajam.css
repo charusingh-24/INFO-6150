@@ -1,0 +1,70 @@
+body {
+    background-color: #e0bd6f;
+    color: #330404;
+    font-family: Verdana, Arial, sans-serif;
+  }
+  nav{
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    background-color:#c5b791;
+    padding: 10px;
+  }
+  nav a{
+    text-decoration: none;
+  }
+  main{
+    padding: 20px;
+    display: block;
+  }
+  ul {
+      list-style-image: url('../images/marker1.gif');
+  }
+  h1{
+    height: 100px;
+    margin:0px;
+    background-image: url('../images/javajambackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+  }
+  h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  h3{
+    background-color: #c5b791;
+    text-transform: uppercase;
+  }
+  dt{
+   font-weight: bold;
+  }
+  header {
+    background-color: #d3aa74;
+  }
+  footer{
+    background-color:#d3aa74;
+    color: black;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+  }
+  #wrapper{
+    margin: auto;
+    width: 80%;
+    background-color: #f3f3c6;
+    min-width: 960px;
+    max-width: 2048px;
+    box-shadow: 3px 3px 3px #2E0000
+  }
+  #hero{
+    height: 300px;
+    color: #f3f3c6;
+    background-image: url('../images/heroroad.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+  }
+  .news{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
