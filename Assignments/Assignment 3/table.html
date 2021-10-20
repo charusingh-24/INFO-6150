@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+
+<head>
+    <title>Table CheckList</title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <table id="myTable">
+        <thead>
+            <tr id="row">
+                <th></th>
+                <th>STUDENT</th>
+                <th>ADVISOR</th>
+                <th>AWARD<br />STATUS</th>
+                <th>SEMESTER</th>
+                <th>TYPE</th>
+                <th>BUDGET<br />#</th>
+                <th>PERCENTAGE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row">
+                <td><input class="chkbox" type="checkbox" /><br /><br /><img src="down.png" width="25px" /></td>
+                <td>Student 1</td>
+                <td>Teacher 1</td>
+                <td>Approved</td>
+                <td>Fall</td>
+                <td>TA</td>
+                <td>12345</td>
+                <td>100%</td>
+                <td><button class="btn_del">Delete</button></td>
+            </tr>
+            <tr class="dropDownTextArea">
+                <td colspan="8">
+                    Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:
+                    <br /><br /><br /> Award Status:<br /><br /><br />
+                </td>
+            </tr>
+            <tr id="row">
+                <td><input class="chkbox" type="checkbox" /><br /><br /><img src="down.png" width="5px" /></td>
+                <td>Student 2</td>
+                <td>Teacher 2</td>
+                <td>Approved</td>
+                <td>Fall</td>
+                <td>TA</td>
+                <td>23456</td>
+                <td>100%</td>
+                <td><button class="btn_del">Delete</button></td>
+
+            </tr>
+            <tr class="dropDownTextArea">
+                <td colspan="8">
+                    Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:
+                    <br /><br /><br /> Award Status:<br /><br /><br />
+                </td>
+            </tr>
+            <tr id="row">
+                <td><input class="chkbox" type="checkbox" /><br /><br /><img src="down.png" width="15px" /></td>
+                <td>Student 3</td>
+                <td>Teacher 3</td>
+                <td>Approved</td>
+                <td>Fall</td>
+                <td>TA</td>
+                <td>34567</td>
+                <td>100%</td>
+                <td><button class="btn_del">Delete</button></td>
+            </tr>
+            <tr class="dropDownTextArea">
+                <td colspan="8">
+                    Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:
+                    <br /><br /><br /> Award Status:<br /><br /><br />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br /><br />
+    <div class="button">
+        <button class="btn_submit" disabled>SUBMIT SELECTED AWARDS</button>
+        <button class="btn_add" onclick="addRow('myTable')">ADD NEW STUDENT</button>
+    </div>
+    <br /><br /><br>
+    <nav class="socialmediaicons">
+        <ul>
+            <li>
+                <a href="http://wwww.facebook.com" target="_blank"><img src="images/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.flickr.com/photos/tags/flicker/" target="_blank"><img src="images/flickr.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.google.com/" target="_blank"><img src="images/google.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.meetup.com/" target="_blank"><img src="images/meetup.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/twitter.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://wordpress.com/" target="_blank"><img src="images/wordpress.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt=""></a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
