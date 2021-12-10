@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Feedback</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		label {
+			float: left;
+			width: 150px;
+		}
+
+		#container {
+			width: 1000px;
+			margin: auto;
+			background-color: beige;
+		}
+
+		.drinksCheck {
+			display: none;
+		}
+
+		main {
+			padding: 50px;
+		}
+
+		table {
+			font-size: small;
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: auto;
+			margin: auto;
+		}
+
+		td,
+		th {
+			border: 2px solid #777272;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #e69143;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+
+		<main>
+			<h2>Feedback</h2>
+			<h3>Love something? Hate something? Let us know!</h3>
+			Note : Fields marked with an asterisk(*) are mandatory
+			<br><br>
+			<form>
+
+				<label>Title*:</label>
+				<input type="radio" name="title" id="title" value="Miss" required="required" />Miss
+				<input type="radio" name="title" id="title" value="Mr." required="required" />Mr.
+				<input type="radio" name="title" id="title" value="Mrs." required="required" />Mrs.
+				<br><br>
+				<label for="firstName">First Name*:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="First Name" required="required"
+					onblur="validateInput(this, 4, 'FName')" />
+				<br><br>
+				<div id="errorMsgFName" style="display: none; color: red;">
+					Invalid values!! First Name cannot contain numbers and special characters. <br><br>
+				</div>
+				<label for="lastName">Last Name*:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"
+					onblur="validateInput(this, 4, 'LName')" />
+				<br><br>
+				<div id="errorMsgLName" style="display: none; color: red;">
+					Invalid values!! Last Name cannot contain numbers and special characters. <br><br>
+				</div>
+
+				<label for="emailId">Email Id*:</label>
+				<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" required="required"
+					onblur="validateInput(this, 2)" />
+				<br><br>
+				<div id="errorMsgEmailId" style="display: none; color: red;">
+					Invalid values!! Email ID should be of the format example@domain.com <br><br>
+				</div>
+
+				<label for="phoneNumber">Phone Number*:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required="required"
+					onblur="validateInput(this, 3)" />
+				<br><br>
+				<div id="errorMsgPhone" style="display: none; color: red;">
+					Invalid values!! Phone number should only have numbers in format xxx-xxx-xxxx <br><br>
+				</div>
+
+				<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" required="required"
+					onblur="validateInput(this, 1)" />
+				<br><br>
+				<div id="errorMsgZip" style="display: none; color: red;">
+					Invalid values!! Zip Code should only contain numbers in formats xxxxx or xxxxx-xxxx <br><br>
+				</div>
+
+				<label for="drinks">Favorite drink*:</label>
+				<select name="drinks" id="drinks" required onchange="updateCheckbox(this)">
+					<option value="">--select--</option>
+					<option value="Lemon Soda">Lemon Soda</option>
+					<option value="Regular Soda">Regular Soda</option>
+					<option value="Green Tea">Green Tea</option>
+					<option value="Milk">Milk</option>
+					<option value="Iced Coffee">Iced Coffee</option>
+					<option value="Hot Coffee">Hot Coffee</option>
+				</select>
+				<br><br>
+
+				<div class="drinksCheck" id="showLemon Soda">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Regular" /> Regular ($3.19)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Large" /> Large ($4.29)
+					<br><br>
+				</div>
+
+				<div class="drinksCheck" id="showRegular Soda">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Regular" /> Regular ($1.99)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Large" /> Large ($2.29)
+					<br><br>
+				</div>
+
+				<div class="drinksCheck" id="showGreen Tea">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Iced" /> Iced ($3.45)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Hot" /> Hot ($3.20)
+					<br><br>
+				</div>
+
+				<div class="drinksCheck" id="showMilk">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Full Fat" /> Full fat (350ml)
+					($3)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Skimmed" /> Skimmed (350ml)
+					($3.19)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Toned" /> Toned (350ml) ($3.29)
+					<br><br>
+				</div>
+
+				<div class="drinksCheck" id="showIced Coffee">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Regular" /> Regular ($1.89)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Large" /> Large ($2.79)
+					<br><br>
+				</div>
+
+				<div class="drinksCheck" id="showHot Coffee">
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Regular" /> Latte ($2.89)
+					<input type="checkbox" id="mycheck" onchange="showtext(this)" value="Large" /> Mocha ($3.79)
+					<br><br>
+				</div>
+
+				<div class="row" id="area" style="display: none;">
+					<label for="customization">Add customizations*:</label>
+					<textarea id="customization" required placeholder="Enter any customization needed for your drink."
+						rows="5" cols="25"></textarea>
+				</div>
+
+				<label for="source">How did you hear*:</label>
+				<input type='checkbox' name="source" id="source" value="Facebook" /> Facebook
+				<input type='checkbox' name="source" id="source" value="Google" /> Google
+				<input type='checkbox' name="source" id="source" value="Yelp" /> Yelp
+				<br><br>
+
+				<label for="comments">Comments*:</label>
+				<textarea name="text" id="comments" required placeholder="Your comments" rows="5" cols="25"></textarea>
+				<br><br>
+				<button name="button" id="submit">Submit</button>
+				<input type="Reset">
+				<br><br>
+			</form>
+			<table id="userTable">
+				<thead>
+					<tr>
+						<th>S. No.</th>
+						<th>Title</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Phone Number</th>
+						<th>Zip Code</th>
+						<th>Favorite Drink</th>
+						<th>Size/Type</th>
+						<th>Customization</th>
+						<th>Source</th>
+						<th>Comments</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</main>
+	</div>
+
+	<script type="text/javascript">
+
+		function showtext(obj) {
+			var box = document.getElementById("area");
+			box.style.display = obj.checked ? "block" : "none";
+
+		}
+
+		function updateCheckbox(obj) {
+			if (obj.selectedIndex != 0) {
+				//hide the divs
+				for (var i = 0; i < divsO.length; i++) {
+					divsO[i].style.display = 'none';
+				}
+				//unhide the selected div
+				document.getElementById('show' + obj.value).style.display = 'block';
+			}
+		}
+
+		window.onload = function () {
+			//get the divs to show/hide
+			divsO = document.getElementById("container").getElementsByTagName('div');
+		}
+
+		function validateInput(object, type, nameType) {
+			var regExName = /^[a-zA-Z]+$/;
+			var regExZip = /^\d{5}$|^\d{5}-\d{4}$/;
+			var regExEmail = /([\w\.]+)@([\w\.]+)\.(\w+)/;
+			var regExPhone = /\d{3}-?\d{3}-\d{4}$|^\d{10}$/;
+
+			var name = 'errorMsg' + nameType;
+			//errorMsgFName;
+			switch (type) {
+				case 1:
+					if (!object.value.match(regExZip)) {
+						object.style.border = "2px solid red";
+						document.getElementById("errorMsgZip").style.display = "block";
+						object.value = "";
+					} else {
+						object.style.border = "";
+						document.getElementById("errorMsgZip").style.display = "none";
+					}
+					break;
+				case 2:
+					if (!object.value.match(regExEmail)) {
+						object.style.border = "2px solid red";
+						document.getElementById("errorMsgEmailId").style.display = "block";
+						object.value = "";
+					} else {
+						object.style.border = "";
+						document.getElementById("errorMsgEmailId").style.display = "none";
+					}
+					break;
+				case 3:
+					if (!object.value.match(regExPhone)) {
+						object.style.border = "2px solid red";
+						document.getElementById("errorMsgPhone").style.display = "block";
+						object.value = "";
+					} else {
+						object.style.border = "";
+						document.getElementById("errorMsgPhone").style.display = "none";
+					}
+					break;
+				case 4:
+					if (!object.value.trim().match(regExName)) {
+						object.style.border = "2px solid red";
+						document.getElementById(name).style.display = "block";
+						object.value = "";
+					} else {
+						object.style.border = "";
+						document.getElementById(name).style.display = "none";
+					}
+			}
+
+		}
+
+		$('#submit').on('click', function () {
+			event.preventDefault();
+			var title = $('#title').val();
+			var first_name = $('#firstName').val();
+			var last_name = $('#lastName').val();
+			var email = $('#emailId').val();
+			var phoneNumber = $('#phoneNumber').val();
+			var zipcode = $('#zipcode').val();
+			var drinks = $('#drinks').val();
+			var drinkCheck = $('#mycheck').val();
+			var customization = $('#customization').val();
+			var source = $('#source').val();
+			var comments = $('#comments').val();
+
+			var count = $('#userTable tr').length;
+
+			if (first_name != "" && last_name != "" && email != "") 
+			{
+				$('#userTable tbody').append('<tr class="child"><td>'+ count +'</td><td>' + title + '</td><td>' + first_name + '</td><td>' + last_name + '</td><td>' + email + '</td><td>' + phoneNumber + '</td><td>' + zipcode + '</td><td>' + drinks + '</td><td>' + drinkCheck + '</td><td>' + customization + '</td><td>' + source + '</td><td>' + comments + '</td></tr>');
+			}
+		});
+	</script>
+
+</body>
+
+</html>
